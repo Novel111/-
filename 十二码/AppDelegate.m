@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HRTRouter.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    self.window.rootViewController = [HRTRouter objectForURL: @"initial"];
     // Override point for customization after application launch.
     return YES;
 }
