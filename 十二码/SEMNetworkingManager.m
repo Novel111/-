@@ -9,8 +9,10 @@
 #import "SEMNetworkingManager.h"
 #import "hotTopicsModel.h"
 #import "DataArchive.h"
+#import "ReCommendNews.h"
 NSString* const hotTopics = @"/hust/university/hotTopics";
 NSString* const hotTopicsCache = @"hotTopicsCache";
+NSString* const ReconmendNewsURL = @"/hust/university/editorViews";
 @implementation SEMNetworkingManager
 + (instancetype)sharedInstance
 {
@@ -31,10 +33,33 @@ NSString* const hotTopicsCache = @"hotTopicsCache";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         hotTopicsModel* model = [hotTopicsModel mj_objectWithKeyValues:responseObject];
-        successBlock(model.resp);
+//        NSArray* array;
+        NSMutableArray* news = [NSMutableArray arrayWithArray:model.resp];
+//        NSMutableArray* oldnews = (NSMutableArray*)[DataArchive unarchiveDataWithFileName:hotTopicsCache];
+//        if(oldnews.count > 0)
+//        {
+//          array = [news arrayByAddingObjectsFromArray:oldnews];
+//        }
+//        [DataArchive archiveData:array withFileName:hotTopicsCache];
+        successBlock(news);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         failureBlock(error);
+    }];
+}
+
+- (NSURLSessionTask*)fetchReCommendNews:(NSInteger)offset success:(void (^)(id))successBlock failure:(void (^)(NSError *))failureBlock
+{
+    [self.requestSerializer setQueryStringSerializationWithStyle:AFHTTPRequestQueryStringDefaultStyle];
+    NSDictionary *para = @{@"offset":@(offset)};
+    return [self GET:ReconmendNewsURL parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        ReCommendNews* model =[ReCommendNews mj_objectWithKeyValues:responseObject];
+        successBlock(model.resp);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
     }];
 }
 @end

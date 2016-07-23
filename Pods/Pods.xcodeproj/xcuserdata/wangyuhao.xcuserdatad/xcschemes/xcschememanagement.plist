@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BHBPopView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FDFullscreenPopGesture.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -69,6 +74,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYCategories.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,17 +87,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03F8323374C56A23DE2BB6FE44C843E6</key>
+		<key>0E94312EA55BB04D0E8B2C80947F79D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0888174D710CA986B0EBE2A7DE65B5C9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1151C0623A034B2921CA41EA24DD909C</key>
+		<key>15E6C5794D6BFD4B34E3CE9A179BA984</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +122,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6F3F620B297B6003B0093F5BF79C26C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>70BC44266C6FFE30D2C57129458E070B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CEEE81030AF9D5BAC969CA5B8423F7C</key>
+		<key>8C156A0C3DF1AF682ECB449EE17E65DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FCA7CA322E11C7CFDFD82D38CEED78C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +152,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DAA5C6F692BC36CE6A6FD36F38EC0732</key>
+		<key>AB4511BFB836BC0F430EE0A447726E2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F097A8C1CBE9A95AE6E0A58B6C8765DF</key>
+		<key>BE40DA1387969E321778618508BB5C2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D363ECA0ADE142135BA8345C20DEC2F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

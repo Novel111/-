@@ -29,5 +29,20 @@
 - (NSURLSessionTask*)fetchHotTopics:(void (^)(id data))successBlock
                        failure:(void (^)(NSError *aError))failureBlock;
 
+
+/*!
+ *  @author 汪宇豪, 16-07-23 09:07:43
+ *
+ *  @brief 获取推荐
+ *
+ *  @param offset       偏移
+ *  @param successBlock 成功
+ *  @param failureBlock 失败
+ *
+ *  @return NSURLSessionTask
+ */
+- (NSURLSessionTask*)fetchReCommendNews:(NSInteger)offset
+                            success:(void (^)(id data))successBlock
+                            failure:(void (^)(NSError *aError))failureBlock;
 @end
 
